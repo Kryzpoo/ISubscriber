@@ -27,14 +27,6 @@ class InstagramUnsubscriber {
         instagramManager.getSite(driver);
         instagramManager.loginOnSite(instagramManager.getUsername(), instagramManager.getPassword());
         instagramManager.handleBanner();
-
-        // TODO: 31.12.2016 Костыль для Ивана
-        /*try {
-            Thread.sleep(30000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }*/
-
         instagramManager.getPersonalPage();
         instagramManager.openFollowingsPage();
         String unsubscriberLiElement = instagramManager.getUnsubscriberLiElement();

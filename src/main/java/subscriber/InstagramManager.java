@@ -200,17 +200,11 @@ class InstagramManager {
 
     void handleBanner() {
         try {
-            WebElement closeBannerButton = shortWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locators.get("closeBannerButton"))));
+            WebElement closeBannerButton = mediumWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locators.get("closeBannerButton"))));
             closeBannerButton.click();
         } catch (Exception e) {
             System.out.println("Баннер не был найден, продолжение работы.");
         }
-    }
-
-
-    void getSearchPage() {
-        WebElement searchPageButton = shortWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locators.get("searchButton"))));
-        searchPageButton.click();
     }
 
 
